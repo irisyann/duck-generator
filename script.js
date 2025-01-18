@@ -69,7 +69,9 @@ function generateSpeechBubble() {
 
     // Clear exact shape of speech bubble
     // Because text is "drawn" onto the picture, this is the only way to clear the text without regenerating the entire canvas
-    ctx.clearRect(190, 75, 150, 80);
+    if (nameInput.value.length > 0) {
+        ctx.clearRect(190, 75, 150, 80);
+    }
     
     const quackText = "quack quack";
     const quackIntroText = "quack quack";
