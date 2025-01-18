@@ -6,4 +6,4 @@ This project is a simple duck generator where you can enter a name for your duck
 - Vanilla HTML, CSS, JavaScript
 - Canvas 2D API
 
-Enjoy creating your own duck!
+Enjoy creating your own duck here: https://irisyann.github.io/duck-generator/
