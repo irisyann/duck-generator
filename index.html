@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Generator</title>
+    <link rel="icon" href="images/duck-normal.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: rgb(0,107,185);
+            background-color: #efefef;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .duckInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #63BCEC;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: rgb(71, 159, 209);
+        }
+
+        .userInput {
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #canvas {
+            margin: 30px;
+        }
+
+        #name {
+            margin-bottom: 5px;
+        }
+
+        .hintText {
+            text-align: left;
+            color: #F4805B;
+            display: none;
+            font-style: italic;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 50px;
+            }
+
+            .container {
+                flex-direction: row;
+            }
+
+            .duckInfo {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>You're getting a free pet duck!</h1>
+
+    <div class="container">
+        <div class="duckInfo">
+            <div class="userInput">
+                <label for="name">Give your duck a name:</label>
+                <input type="text" id="name" placeholder="Your name" maxlength="10">
+                <div class="hintText">
+                    <small>Keep it to 10 chars, it's just a duck</small>
+                </div>
+            </div>
+            <div class="userInput">
+                <label for="duck">Choose your duck:</label>
+                <select id="duck">
+                    <option value="duck-normal.png">Normal-looking duck</option>
+                    <option value="duck-knife.png">Duck that may kill you</option>
+                    <option value="duck-laptop.png">Workaholic duck</option>
+                </select>
+            </div>
+
+            <button id="download">🖼️ Download</button>
+        </div>
+    
+        <canvas id="canvas" width="400" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
