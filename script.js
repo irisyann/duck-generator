@@ -41,6 +41,7 @@ downloadButton.addEventListener('click', () => {
     link.download = `duck-${nameInput.value}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
+    alert('Your image should be downloading now, if not you probably need to re-open this in a browser!');
 });
 
 function generateDuckImage() {
