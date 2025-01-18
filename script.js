@@ -16,12 +16,9 @@ const backgroundImage = new Image();
 backgroundImage.src = 'images/pond.png';
 backgroundImage.onload = () => {
     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-};
-
-document.addEventListener('DOMContentLoaded', () => {
     generateDuckImage();
     generateSpeechBubble();
-});
+};
 
 duckSelect.addEventListener('change', () => {
     generateDuckImage();
